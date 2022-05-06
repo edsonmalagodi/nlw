@@ -9,6 +9,8 @@ import {
 import { ArrowLeft } from 'phosphor-react-native'
 
 import { FeedbackType } from '../../components/Widget'
+import { ScreenshotButton } from '../../components/ScreenshotButton'
+
 
 import { styles } from './styles'
 import { theme } from '../../theme'
@@ -33,12 +35,27 @@ export function Form({ feedbackType }: Props){
         
         <View style={styles.titleContainer}>
           <Image
-            source={feed}
+            source={feedbackTypeInfo.image}
+            style={styles.image}
           />
           <Text style={styles.titleText}>
-            {feedbackTypeInfo.image}
+            {feedbackTypeInfo.title}
           </Text>
         </View>
+      </View>
+
+      <TextInput
+        multiline
+        style={styles.input}
+        placeholder='Algo nao esta funcionando bem? Queremos corrigir'
+        placeholderTextColor={theme.colors.text_secondary}
+      />
+      <View>
+        <ScreenshotButton
+          onTakeShot={() => {}}
+          onRemoveShot={() => {}}
+          screenshot=""
+        />
       </View>
 
     </View>

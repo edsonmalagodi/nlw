@@ -1,4 +1,4 @@
-import { Rows } from 'phosphor-react-native';
+
 import { StyleSheet } from 'react-native';
 import { theme } from '../../theme';
 
