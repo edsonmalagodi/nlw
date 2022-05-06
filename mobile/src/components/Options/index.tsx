@@ -11,9 +11,8 @@ import { styles } from './styles';
 export function Options() {
   return (
     <View style={styles.container}>
-
       <Text>
-        
+        Deixe seu feedback
       </Text>
       <View style={styles.options}>
         {
