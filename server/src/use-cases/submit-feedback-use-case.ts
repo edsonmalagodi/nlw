@@ -37,8 +37,11 @@ export class SubmitFeedbackUseCase{
     await this.mailAdapter.sendMail({
       subject: 'novo feedback',
       body: [
+        `<div>`,
         `<p>Tipo do feedback: ${type} </p>`,
         `<p>Comentário do feedback: ${comment} </p>`,
+        screenshot ? `<img src="${screenshot}" />` : ``,
+        `</div>`,
       ].join('\n')
     })
   }
